@@ -1,2 +1,2 @@
 # edu11
-spring data jdbc
+Spring Data JDBC
