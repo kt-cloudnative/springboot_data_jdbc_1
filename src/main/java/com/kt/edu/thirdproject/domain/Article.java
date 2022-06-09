@@ -15,4 +15,8 @@ public class Article {
     private String title;
     @Schema(description = "게시물 내용")
     private String content;
+    @Schema(description = "페이지크기")
+    private int pageSize;
+    @Schema(description = "페이지번호")
+    private int pageNo;
 }

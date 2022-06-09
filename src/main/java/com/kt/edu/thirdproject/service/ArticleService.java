@@ -1,14 +1,14 @@
 package com.kt.edu.thirdproject.service;
 
 import com.kt.edu.thirdproject.domain.Article;
-import com.kt.edu.thirdproject.repository.ArticleMapper;
+import com.kt.edu.thirdproject.repository.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -16,46 +16,24 @@ import java.util.stream.Collectors;
 public class ArticleService {
 
     @Autowired
-    private  ArticleMapper articleMapper;
+    private ArticleRepository articleRepository;
 
-    public Article create(Article article) {
+    /*public Article create(Article article) {
         log.info("Request to create Article : " +  article);
-        articleMapper.insert(article);
+        //articleRepository.insert(article);
         return article;
-    }
+    }*/
 
-    public List<Article> findAll() {
+    public List<Article> retvByPage(int pageSize , int pageNo) {
+        PageRequest pageRequest = PageRequest.of((pageNo -1),pageSize);
         log.info("Request to get all Articles");
-        //return this.articleMapper.findAll();
-        return articleMapper.findAll()
-         .stream()
-         .collect(Collectors.toList());
+        return articleRepository.retvByPage(pageRequest.getPageSize(),pageRequest.getOffset()+1 );
     }
 
-    @Transactional(readOnly = true)
+    /*@Transactional(readOnly = true)
     public Article findById(Long id) {
         log.debug("Request to get Article : {}", id);
-        return articleMapper.findById(id).get();
-    }
-
-    /*
-    public List<Article> findAllActive() {
-        log.debug("Request to get all Articles");
-        return this.articleMapper.findAllByEnabled(true);
-    }
-
-    public List<Article> findAllInactive() {
-        log.debug("Request to get all Articles");
-        return this.articleMapper.findAllByEnabled(false);
+        return articleRepository.findById(id).get();
     }*/
 
-    /*public void delete(Long id) {
-        log.debug("Request to delete article : {}", id);
-
-        Article article = this.articleMapper.findById(id)
-                .orElseThrow(() -> new IllegalStateException("Cannot find Article with id " + id));
-
-        article.setEnabled(false);
-        this.articleMapper.update(article);
-    }*/
 }

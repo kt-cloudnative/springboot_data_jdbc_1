@@ -34,7 +34,7 @@ app-info:
   app-name: "edu-spring-data-jdbc"
   title: "Caravan Edu API"
   build:
-    version: '@project.version@'
+    version: '0.0.1-SNAPSHOT'
     timestamp: '@app.build.timestamp@'
   user-id: "jakelee"
   org-id: "my-home"
