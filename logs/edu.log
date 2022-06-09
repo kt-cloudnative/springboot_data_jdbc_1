@@ -22,3 +22,5 @@ edu10-1 14:50:18.326 INFO  jdbc.resultsettable : - \n|---|------|--------|\n|id 
 edu10-1 14:50:29.991 INFO  jdbc.sqltiming : - SELECT * FROM ARTICLE\n {executed in 0 msec} 
 edu10-1 14:50:29.993 INFO  jdbc.resultsettable : - \n|---|------|--------|\n|id |title |content |\n|---|------|--------|\n|1  |1     |테스트 1   |\n|2  |2     |테스트2    |\n|3  |3     |테스트 3   |\n|---|------|--------|\n 
 edu10-1 14:50:39.408 INFO  jdbc.sqltiming : - DELETE FROM ARTICLE  WHERE ID =1\n {executed in 2 msec} 
+edu10-1 14:54:54.681 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Shutdown initiated... 
+edu10-1 14:54:54.682 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Shutdown completed. 
