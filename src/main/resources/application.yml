@@ -10,8 +10,8 @@ spring:
     active: local
   banner:
     location: "classpath:banner.txt"
-#  cache:
-#    cache-names: articles
+  cache:
+    cache-names: articles
 
 # logging
 logging:
