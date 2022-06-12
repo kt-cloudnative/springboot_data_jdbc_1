@@ -1,25 +1,3 @@
-edu10-1 17:43:12.684 INFO  com.kt.edu.thirdproject.ThirdprojectApplication : - Starting ThirdprojectApplication using Java 17.0.2 on jake-MacBookAir.local with PID 4615 (/Users/jakelee/Downloads/edu11/target/classes started by jakelee in /Users/jakelee/Downloads/edu11) 
-edu10-1 17:43:12.687 DEBUG com.kt.edu.thirdproject.ThirdprojectApplication : - Running with Spring Boot v2.6.3, Spring v5.3.15 
-edu10-1 17:43:12.687 INFO  com.kt.edu.thirdproject.ThirdprojectApplication : - The following profiles are active: local 
-edu10-1 17:43:13.137 INFO  org.apache.coyote.http11.Http11NioProtocol : - Initializing ProtocolHandler ["http-nio-8080"] 
-edu10-1 17:43:13.137 INFO  org.apache.catalina.core.StandardService : - Starting service [Tomcat] 
-edu10-1 17:43:13.137 INFO  org.apache.catalina.core.StandardEngine : - Starting Servlet engine: [Apache Tomcat/9.0.56] 
-edu10-1 17:43:13.158 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : - Initializing Spring embedded WebApplicationContext 
-edu10-1 17:43:13.203 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Starting... 
-edu10-1 17:43:13.239 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Start completed. 
-edu10-1 17:43:13.249 INFO  jdbc.sqltiming : - create sequence hibernate_sequence\n {executed in 1 msec} 
-edu10-1 17:43:13.250 INFO  jdbc.sqltiming : - create table article ( id long not null, title varchar(255), content varchar(255) )\n {executed in 1 msec} 
-edu10-1 17:43:13.251 INFO  jdbc.sqltiming : - alter table article add constraint article_pk primary key (id)\n {executed in 1 msec} 
-edu10-1 17:43:13.255 INFO  jdbc.sqltiming : - INSERT INTO article(id, title, content) VALUES(1, '1', '테스트 1')\n {executed in 1 msec} 
-edu10-1 17:43:13.255 INFO  jdbc.sqltiming : - INSERT INTO article(id, title, content) VALUES(2, '2', '테스트2')\n {executed in 0 msec} 
-edu10-1 17:43:13.255 INFO  jdbc.sqltiming : - INSERT INTO article(id, title, content) VALUES(3, '3', '테스트 3')\n {executed in 0 msec} 
-edu10-1 17:43:13.631 INFO  org.apache.coyote.http11.Http11NioProtocol : - Starting ProtocolHandler ["http-nio-8080"] 
-edu10-1 17:43:13.642 INFO  com.kt.edu.thirdproject.ThirdprojectApplication : - Started ThirdprojectApplication in 1.073 seconds (JVM running for 1.631) 
-edu10-1 17:43:20.618 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : - Initializing Spring DispatcherServlet 'dispatcherServlet' 
-edu10-1 17:43:20.654 INFO  com.kt.edu.thirdproject.service.ArticleService : - Request to get all Articles 
-edu10-1 17:43:20.667 INFO  jdbc.sqltiming : - SELECT  id, title,  content\nFROM\n  article\nWHERE id between 1 and (1 + 2 -1 )\n {executed in 1 msec} 
-edu10-1 17:43:20.681 INFO  jdbc.resultsettable : - \n|---|------|--------|\n|id |title |content |\n|---|------|--------|\n|1  |1     |테스트 1   |\n|2  |2     |테스트2    |\n|---|------|--------|\n 
-edu10-1 17:43:38.898 INFO  jdbc.sqltiming : - delete from article\n {executed in 2 msec} 
-edu10-1 17:43:55.979 INFO  com.kt.edu.thirdproject.service.ArticleService : - Request to get all Articles 
-edu10-1 17:43:55.981 INFO  jdbc.sqltiming : - SELECT  id, title,  content\nFROM\n  article\nWHERE id between 1 and (1 + 3 -1 )\n {executed in 1 msec} 
-edu10-1 17:43:55.981 INFO  jdbc.resultsettable : - \n|---|------|--------|\n|id |title |content |\n|---|------|--------|\n|---|------|--------|\n 
+edu10-1 08:12:25.034 WARN  com.zaxxer.hikari.pool.HikariPool : - hikari-cp - Thread starvation or clock leap detected (housekeeper delta=21m41s300ms). 
+edu10-1 08:28:27.719 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Shutdown initiated... 
+edu10-1 08:28:27.720 INFO  com.zaxxer.hikari.HikariDataSource : - hikari-cp - Shutdown completed. 
