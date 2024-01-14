@@ -1,2 +1,2 @@
-# edu11
+# Springboot Data JDBC
 Spring Data JDBC
