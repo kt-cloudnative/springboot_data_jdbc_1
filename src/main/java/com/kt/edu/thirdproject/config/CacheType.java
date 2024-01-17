@@ -1,6 +1,5 @@
 package com.kt.edu.thirdproject.config;
 
-import lombok.Builder;
 import lombok.Getter;
 
 @Getter
